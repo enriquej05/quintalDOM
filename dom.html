@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style type="text/css">
+        
+        h3  { position: fixed; }
+        #caja { position: absolute; width: 100px; height: 100px; border: 1px solid black; 
+                background-color: yellow; right: 60px; top: 1100px;} 
+        #textos {  width: 300px; height: 200px; border: 1px solid black; position: relative; right: -500px; margin-top: 150px; color: #fff; background:rgba(0, 0, 0, 0.7);}
+        </style>
+</head>
+
+<body>
+    <nav>
+     <div class="container">
+        <div class="nav-wrapper">
+            <a href="" class="brand-logo" id="nombre"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+             
+              <li>
+                  <a onclick="salir()">Salir</a>
+              </li>
+            </ul>
+          </div>
+     </div>
+    </nav>
+   
+ <div class="container" id="obj1">
+     <div class="carousel carousel-slider center">
+         <a class="carousel-item" ><img src="./imagenes/heath-the-bumble-bee-4224954_1920.jpg"></a>
+         <a class="carousel-item" ><img src="./imagenes/cloud-5946381_1920.jpg"></a>
+         <a class="carousel-item" ><img src="./imagenes/boat-5889919_1280.png"></a>
+         <a class="carousel-item" ><img src="./imagenes/sunrise-5863751_1920.png"></a>
+         <a class="carousel-item" ><img src="./imagenes/malaga-5043132_1920.jpg"></a>
+         
+       </div>
+
+ </div>
+ <br><br>
+ <div class="container" >
+    <button onclick="ocultar()" class="right waves-effect waves-light btn" >Ocultar</button>
+    <button onclick="mostrar()" class="waves-effect waves-light btn" >Mostrar</button>
+ </div>
+<br><br>
+
+<div class="parallax-container">
+    <div class="parallax"><img src="./imagenes/malaga-5043132_1920.jpg"></div>
+    <div id="textos">
+   <p id="posicion">Coordenadas de la página: </p>
+   <p id="ventana">Coordenadas  de la ventana: </p>
+   <p id="pantalla">Coordenadas  de la pantalla:</p>
+   <p id="accion"> Estado: </p>
+   <p id="desplaza" ></p>
+</div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header">Evento mouse</h2>
+      <p class="grey-text text-darken-3 lighten-3">
+
+       Arrastra este cuadrado: Haz un click encima de él para cogerlo y doble click para soltarlo.
+    </p>
+    <div id="caja"></div>
+</div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="./imagenes/heath-the-bumble-bee-4224954_1920.jpg"></div>
+
+  </div>
+  <div class="section white">
+            <div class="row container">
+            <h2 class="header">Modelo de Objetos del Documento</h2>
+            <p class="grey-text text-darken-3 lighten-3">
+
+                El Modelo de Objetos del Documento (DOM) es una interfaz de programación de aplicaciones (API) para documentos validos HTML y bien construidos XML. Define la estructura lógica de los documentos y el modo en que se accede y manipula. En la especificación DOM, el término "documento" es utilizado en un sentido amplio - the term "document" is used in the broad sense - cada vez más XML es utilizado como un medio de representar muchas clases diferentes de información que puede ser almacenada en sistemas diversos, y mucha de esta información se vería, en términos tradicionales, más como datos que como documentos. Sin embargo, XML presenta estos datos como documentos, y se puede utilizar DOM para manejar estos datos.
+            </p>
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Intercambio Asíncrono</a>
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Herramientas Asíncrono</a>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                <h4>Intercambio Asíncrono</h4>
+                <p>La comunicación asíncrona es un método de intercambio de mensajes entre dos o más partes, en la que cada parte recibe y procesa el mensaje cuando sea conveniente o posible de realizar, en vez de hacerlo inmediatamente al recibirlo.</p>
+                </div>
+                <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+                </div>
+            </div>
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                <h4>Herramientas Asíncronos</h4>
+                <p>Las herramientas de comunicación asincrónicas, son aquellas en las que el emisor envía el mensaje y la respuesta del receptor es mediata. Pueden trascurrir varias horas o días, antes de recibir respuesta al mensaje, dependiendo de la dinámica de trabajo del uso y organización de uso de los recursos que cuentan con estas características. Entre estas herramientas está la mensajería interna, el correo electrónico, los foros,wiki, blog, entre otros.
+                </p>
+                </div>
+                <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+                </div>
+            </div>
+          
+        
+        </div>
+  </div>
+    
+  
+  <br/><br/><br/><br/><br/>
+
+ 
+
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems);
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems);
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+        function mostrar(){
+        document.getElementById('obj1').style.display = 'block';
+        }
+        function ocultar(){
+        document.getElementById('obj1').style.display = 'none';
+        }
+        function salir() {
+            localStorage.clear();
+            window.location.href = "./index.html";
+        }
+       
+
+        name = localStorage.getItem('nombre');
+        document.getElementById('nombre').innerHTML = name;
+        
+</script>
+<script type="text/javascript">
+    var estado = "parar" // Estado inicial del cuadrado: sin mover
+    function info(elEvento) {
+             var evento = elEvento || window.event; //obtener objeto event
+             var despX = document.documentElement.scrollLeft; //desplazamiento de la pagiina al hacer scroll
+             var despY = document.documentElement.scrollTop;
+             var ventanaX = evento.clientX; //coordenadas de la ventana
+             var ventanaY = evento.clientY;
+             var paginaX =  ventanaX + despX; //coordenadas de la página
+             var paginaY =  ventanaY + despY;
+             var pantallaX = evento.screenX //coordenadas de la pantalla
+             var pantallaY = evento.screenY
+             caja1 = document.getElementById("caja") //posición del cuadrado
+             posx = paginaX - 50
+             posy = paginaY - 50
+             if (estado == "mover"){ //desplazamiento del cuadrado
+                 caja1.style.left = posx + "px"
+                 caja1.style.top = posy + "px"	
+                 }
+             texto = document.getElementById("posicion") //escribir coordenadas de la página
+             texto.innerHTML = "Coordenadas de la página: " + paginaX + "px, " + paginaY + "px."
+             texto2 = document.getElementById("ventana") //escribir coordenadas de la ventana
+             texto2.innerHTML = "Coordenadas de la ventana:  " + ventanaX + "px, " + ventanaY + "px."
+             texto3 = document.getElementById("pantalla") //escribir coordenadas de la pantalla
+             texto3.innerHTML = "Coordenadas de la pantalla: " + pantallaX + "px, " + pantallaY + "px." 
+             texto4 = document.getElementById("accion") //e3scribir estado del cuadrado
+             texto4.innerHTML = "Movimiento del cuadrado: " + estado
+             texto5 = document.getElementById("desplaza") //scroll de la página
+             texto5.innerHTML = "Desplazamiento de la página: " + despX + ", " + despY
+             }	
+    function mover(ev){ //control del movimiento del cuadrado
+             var evento2 = ev || window.event //distinguir acción del ratón
+             tipo = evento2.type
+             if (tipo == "click") { //coger el cuadrado (un  click)
+                estado = "mover"
+                }
+             else if (tipo == "dblclick") { //soltar el cuadrado (doble click)
+                estado = "parar"
+                }
+             }
+    window.onload = function() { //provocar los eventos				
+    document.body.onmousemove = info	
+    document.getElementById("caja").onclick = mover;
+    document.getElementById("caja").ondblclick = mover;
+    }
+    </script>
+</body>
+</html>
